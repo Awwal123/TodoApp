@@ -19,7 +19,7 @@ body {
 .container {
   margin-left: 40px;
   margin-right: 40px;
-
+  /* border-radius: 20px; */
   /* margin-top: 60px; */
   padding-top: 30px;
 }
@@ -32,24 +32,72 @@ body {
   font-size: 25px;
   line-height: 33px;
 }
-.horizontal-line {
-  width: 382px;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  outline-style: none;
-  border-top: 1px dotted;
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  /* margin-bottom: 20px; */
+  margin-top: 20px;
 }
+.todo-input {
+  flex: 1;
+  outline: none;
+  width: 307px;
+  padding: 10px 10px 10px 20px;
+  background-color: transparent;
+  border: 1px dashed #000000;
+  border-radius: 20px;
+  color: red;
+  font-size: 16px;
+  margin-right: 10px;
+}
+.add-btn {
+  padding: 10px 30px;
+  margin-left: 20px;
+  color: #1e3e62;
+  font-weight: 500px;
+  width: auto;
+  border-radius: 5px;
+  border: 2px solid #ff6500;
+  background-color: transparent;
+  cursor: pointer;
+}
+.add-btn:hover {
+  background-color: #35e07d;
+  color: white;
+  border: none;
+}
+
 .checkboxes {
   margin-top: 30px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 25px;
+  max-height: 500px; /* Set a max height for scrollable area */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding-right: 10px;
+  overflow-x: hidden;
+  font-size: 19px;
 }
+.checkboxes::-webkit-scrollbar {
+  width: 7px; /* Width of the scrollbar */
+}
+
+.checkboxes::-webkit-scrollbar-thumb {
+  background-color: #ffcfb3;
+  border-radius: 5px;
+}
+
+.checkboxes::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
 .check-styles {
   display: flex;
+  background-color: #b7e0ff;
   width: 382px;
   gap: 25px;
 }
+
 .checkbox-text {
   font-weight: 500;
   font-size: 15px;
@@ -98,4 +146,40 @@ body {
 .checkboxes input[type="checkbox"]:disabled + label::before {
   background-color: #ccc;
   border-color: #999;
+}
+
+.filters {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 30px;
+}
+.filter {
+  color: #1e3e62;
+  padding: 5px 15px;
+  border-radius: 100px;
+  border: 2px solid #ffcfb3;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.filter:hover {
+  background-color: #35e07d;
+  color: white;
+  border: none;
+}
+.delete-all {
+  display: flex;
+  color: #1e3e62;
+  padding: 7px 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.delete-all:hover {
+  background-color: #35e07d;
+}
+.mark {
+  margin-top: 20px;
+  text-shadow: 0 0 3px #ff0000;
+  font-size: 19px;
 }
