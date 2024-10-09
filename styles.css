@@ -78,6 +78,7 @@ body {
   overflow-x: hidden;
   font-size: 19px;
 }
+
 .checkboxes::-webkit-scrollbar {
   width: 7px; /* Width of the scrollbar */
 }
@@ -113,8 +114,8 @@ body {
 }
 .checkboxes label::before {
   content: "";
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   border-radius: 0.15em;
   margin-right: 0.5em;
   border: 2px solid black;
@@ -182,4 +183,10 @@ body {
   margin-top: 20px;
   text-shadow: 0 0 3px #ff0000;
   font-size: 19px;
+}
+
+@media screen and (max-width: 480px) {
+  .mark {
+    display: none;
+  }
 }
